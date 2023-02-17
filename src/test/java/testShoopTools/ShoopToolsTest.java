@@ -63,7 +63,7 @@ public class ShoopToolsTest extends BaseTestShoopTools {
 
         logInAndOrderPageShoopTools.clickCheckoutButton();
 
-        logInAndOrderPageShoopTools.clickAcceptTerms();
+        logInAndOrderPageShoopTools.clickAcceptTermsCheckBox();
 
         logInAndOrderPageShoopTools.clickPlaceOrderButton();
 

@@ -1,10 +1,6 @@
 package pageShoopTools;
 
 import baseShoopTools.BaseTestShoopTools;
-import net.bytebuddy.asm.Advice;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -209,7 +205,7 @@ public class LogInAndOrderPageShoopTools extends BaseTestShoopTools {
         checkoutButton.click();
     }
 
-    public void clickAcceptTerms() {
+    public void clickAcceptTermsCheckBox() {
         Actions actions = new Actions(driver);
         wdWait.until(ExpectedConditions.elementToBeClickable(acceptTerms));
         actions.moveToElement(acceptTerms).click().perform();
