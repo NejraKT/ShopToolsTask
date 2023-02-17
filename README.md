@@ -1,4 +1,4 @@
-Shop Tools Task 
+## Shop Tools Task 
 
 This project represents a Smoke Test for the website: [Shop Tools Web](https://shop.demoqa.com) .
 
