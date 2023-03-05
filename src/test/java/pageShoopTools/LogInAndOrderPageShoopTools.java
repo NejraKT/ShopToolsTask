@@ -8,7 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.logging.Logger;
+
 public class LogInAndOrderPageShoopTools extends BaseTestShoopTools {
+
+    Logger logger = Logger.getLogger(BaseTestShoopTools.class.getName());
+
 
     public LogInAndOrderPageShoopTools() {
         PageFactory.initElements(driver, this);
@@ -22,6 +27,7 @@ public class LogInAndOrderPageShoopTools extends BaseTestShoopTools {
 
     @FindBy(id = "username")
     WebElement usernameField;
+
     @FindBy(id = "password")
     WebElement passwordField;
     @FindBy(name = "login")
@@ -147,7 +153,8 @@ public class LogInAndOrderPageShoopTools extends BaseTestShoopTools {
 
     public void clickChooseSizeDress() {
         wdWait.until(ExpectedConditions.elementToBeClickable(chooseSizeField));
-        chooseSizeField.click();
+       // chooseSizeField.click();
+        actions.click(chooseSizeField);
     }
 
     public void clickChooseMediumDress() {
@@ -206,12 +213,12 @@ public class LogInAndOrderPageShoopTools extends BaseTestShoopTools {
     }
 
     public void clickAcceptTermsCheckBox() {
-        Actions actions = new Actions(driver);
         wdWait.until(ExpectedConditions.elementToBeClickable(acceptTerms));
         actions.moveToElement(acceptTerms).click().perform();
     }
 
     public void clickPlaceOrderButton() {
+        logger.info("The driver is waiting to click on place order button");
         wdWait.until(ExpectedConditions.elementToBeClickable(placeOrderButton));
         placeOrderButton.click();
     }
