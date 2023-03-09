@@ -8,6 +8,7 @@ import pageShoopTools.LogInAndOrderPageShoopTools;
 public class ShoopToolsTest extends BaseTestShoopTools {
 
     LogInAndOrderPageShoopTools logInAndOrderPageShoopTools;
+    String password = "AnaMarijaCengic123!";
 
     @Before
     public void setUpTestPage() {
@@ -23,7 +24,7 @@ public class ShoopToolsTest extends BaseTestShoopTools {
 
         logInAndOrderPageShoopTools.sendKeysUsernameField("Ana Marija");
 
-        logInAndOrderPageShoopTools.sendKeysPasswordField("AnaMarijaCengic123!");
+        logInAndOrderPageShoopTools.sendKeysPasswordField(password);
 
         logInAndOrderPageShoopTools.clickLogInButton();
 
