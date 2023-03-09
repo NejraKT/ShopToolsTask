@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.logging.Logger;
 
 public class BaseTestShoopTools {
 
@@ -30,7 +31,7 @@ public class BaseTestShoopTools {
 
     @After
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 
 
